@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://postgres:Salamalaka777!@db.vlnlodexffnhchihcrag.supabase.co:5432/postgres
+      - key: NODE_ENV
+        value: production
+    repo: https://github.com/AteraWren/react-jobly-backend.git
+    branch: master
+    
+  - type: static
+    name: frontend
+    buildCommand: npm install && npm run build
+    publishPath: build
+    envVars:
+      - key: REACT_APP_BASE_URL
+        value: https://your-backend-service.onrender.com
+    repo: https://github.com/AteraWren/react-jobly-frontend.git
+    branch: master
