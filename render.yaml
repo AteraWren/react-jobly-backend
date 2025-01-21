@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: backend
+    name: react-jobly-backend
     env: node
     plan: free
     buildCommand: npm install
@@ -14,7 +14,7 @@ services:
     branch: master
     
   - type: static
-    name: frontend
+    name: react-jobly-frontend
     buildCommand: npm install && npm run build
     publishPath: build
     envVars:
