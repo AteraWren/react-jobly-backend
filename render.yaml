@@ -7,7 +7,7 @@ services:
     startCommand: npm start
     envVars:
       - key: DATABASE_URL
-        value: postgresql://postgres:Salamalaka777!@db.vlnlodexffnhchihcrag.supabase.co:5432/postgres
+        value: postgresql://postgres.vlnlodexffnhchihcrag:Salamalaka777!@aws-0-us-west-1.pooler.supabase.com:5432/postgres
       - key: NODE_ENV
         value: production
     repo: https://github.com/AteraWren/react-jobly-backend.git
